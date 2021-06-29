@@ -16,7 +16,6 @@ public class Calcular {
         X = X * Math.PI / 180;
 
         for (int i = 0; i <= 4; i++) {
-
             double dividendo = Math.pow(X, ((2 * i) + 1));
             double divisor = (2 * i + 1);
             double factoriall = factorial((int) divisor);
@@ -24,7 +23,6 @@ public class Calcular {
 
             termino = division * (Math.pow(-1, i));
             solucion = (solucion + termino);
-
         }
             return (solucion);
     }
@@ -35,7 +33,6 @@ public class Calcular {
         X = X * Math.PI / 180;
 
         for (int i = 0; i <= 4; i++) {
-
             double dividendo = Math.pow(X, (2 * i));
             double divisor = (2 * i);
             double factoriall = factorial((int) divisor);
@@ -51,7 +48,6 @@ public class Calcular {
         double solucion = 0;
 
         for (int i = 0; i <= Nmax; i++) {
-
             double dividendo = Math.pow(X, i);
             double divisor = factorial(i);
             double division = dividendo / divisor;
@@ -77,7 +73,6 @@ public class Calcular {
     }
 
     public BigDecimal piBigDecimal(int n) {
-
         BigDecimal divisor = new BigDecimal("1");
         BigDecimal signo = new BigDecimal("1");
         BigDecimal termino;
@@ -105,8 +100,7 @@ public class Calcular {
         for (int i = Nfac; i > 0; i--) {
             factorial = factorial * i;
         }
+
         return factorial;
     }
-
-
 }

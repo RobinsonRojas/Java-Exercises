@@ -30,9 +30,9 @@ public class Main {
             System.out.println("6.Salir");
 
             System.out.print("\nDigite una Opcion: ");
-
             menu = leer.nextInt();
             System.out.println("----------------------------------");
+
 
             switch (menu) {
                 case 1:
