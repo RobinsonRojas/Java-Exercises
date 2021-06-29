@@ -20,69 +20,58 @@ public class Main {
 
         int menu = 0;
         while (menu != 6) {
-            System.out.println("\n----------------------------------");
-            System.out.println("       Menu");
-            System.out.println("1.Calcular la Serie de Taylor de sin x.");
-            System.out.println("2.Calcular la Serie de Taylor de cos x.");
-            System.out.println("3.Calcular la Serie de Taylor de e^x.");
-            System.out.println("4.Calcular el numero pi.");
-            System.out.println("5.Calcular el factorial de un numero.");
+            System.out.println("----------------------------------");
+            System.out.println("\n       Menu");
+            System.out.println("1.Taylor de sin x.");
+            System.out.println("2.Taylor de cos x.");
+            System.out.println("3.Serie de Taylor de e^x.");
+            System.out.println("4.Formula de Leibniz para π 'pi', con n° terminos de precision, bigdecimal.");
+            System.out.println("5.Factorial.");
             System.out.println("6.Salir");
 
-            System.out.print("\nDigite una Opcion:");
-
+            System.out.print("\nDigite una Opcion: ");
             menu = leer.nextInt();
             System.out.println("----------------------------------");
 
 
             switch (menu) {
                 case 1:
-                    System.out.print("Ingrese el angulo x:");
-                    double X1 = leer.nextDouble();
-                    op.X = X1;
-                    op.X = op.X * Math.PI / 180;
-
-                    System.out.print("Ingrese el numero hasta donde termina n:");
-                    op.Nmax = leer.nextInt();
-
-                    System.out.println("La serie de Taylor de sin(" + X1 + ") es:");
-                    op.seno(op.X, op.Nmax);
+                    System.out.println("[Serie de Taylor de sin x]");
+                    System.out.print("Ingrese el angulo x: ");
+                    op.X = leer.nextDouble();
+                    System.out.println("sin(" + op.X + ") es= " + op.seno(op.X));
                     break;
 
                 case 2:
-                    System.out.print("Ingrese el angulo x:");
-                    double X2 = leer.nextDouble();
-                    op.X = X2;
-                    op.X = op.X * Math.PI / 180;
-
-                    System.out.print("Ingrese el numero hasta donde termina n:");
-                    op.Nmax = leer.nextInt();
-
-                    System.out.println("La serie de Taylor de cos(" + X2 + ") es:");
-                    op.cos(op.X, op.Nmax);
+                    System.out.println("[Serie de Taylor de cos x]");
+                    System.out.print("Ingrese el angulo x: ");
+                    op.X = leer.nextDouble();
+                    System.out.println("cos(" + op.X + ") es= " + op.cos(op.X));
                     break;
 
                 case 3:
-                    System.out.print("Ingrese x:");
+                    System.out.println("[Función exponencial e^x]");
+                    System.out.print("Ingrese x: ");
                     op.X = leer.nextDouble();
 
-                    System.out.print("Ingrese el numero hasta donde termina n:");
+                    System.out.print("Ingrese el n° termino: ");
                     op.Nmax = leer.nextInt();
 
-                    System.out.println("La serie de Taylor de e^^" + op.X + ") es:");
-                    op.e(op.X, op.Nmax);
+                    System.out.println("Sumatoria en n : " + op.Nmax + " = " + op.e(op.X, op.Nmax));
                     break;
 
                 case 4:
-                    System.out.print("Ingrese el numero de precision para la serie para pi/4:");
+                    System.out.print("Ingrese el n° de precision para la serie de Leibniz: ");
                     op.PI = leer.nextInt();
-                    System.out.println(op.pi(op.PI));
+
+                    System.out.println("piDouble, π = " + op.piDouble(op.PI));
+                    System.out.println("piBigDecimal, π = " + op.piBigDecimal(op.PI));
                     break;
 
                 case 5:
-                    System.out.print("Ingrese el numero para calcular su factorial:");
+                    System.out.print("Ingrese el numero para calcular su factorial: ");
                     op.Nfac = leer.nextInt();
-                    System.out.println(op.factorial(op.Nfac));
+                    System.out.println("Factorial de " + op.Nfac + " = " + op.factorial(op.Nfac));
                     break;
 
                 case 6:
