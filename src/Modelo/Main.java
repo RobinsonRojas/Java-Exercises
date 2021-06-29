@@ -61,6 +61,7 @@ public class Main {
                     break;
 
                 case 4:
+                    System.out.println("[π, double, BigDecimal]");
                     System.out.print("Ingrese el n° de precision para la serie de Leibniz: ");
                     op.PI = leer.nextInt();
 
@@ -69,7 +70,8 @@ public class Main {
                     break;
 
                 case 5:
-                    System.out.print("Ingrese el numero para calcular su factorial: ");
+                    System.out.println("[Factorial]");
+                    System.out.print("Ingrese el numero : ");
                     op.Nfac = leer.nextInt();
                     System.out.println("Factorial de " + op.Nfac + " = " + op.factorial(op.Nfac));
                     break;
