@@ -10,6 +10,13 @@ public class Calcular {
     public int PI;      // Numero de veces que se repetira la sumatoria para mas precision ingresado por el usuario para calcular pi.
     public int Nfac;    // Numero al que se le calcula su factorial.
 
+    public Calcular(double x, int nmax, int PI, int nfac) {
+        X = x;
+        Nmax = nmax;
+        this.PI = PI;
+        Nfac = nfac;
+    }
+
     public double seno(double X) {
         double termino;
         double solucion = 0;
@@ -24,7 +31,7 @@ public class Calcular {
             termino = division * (Math.pow(-1, i));
             solucion = (solucion + termino);
         }
-            return (solucion);
+        return (solucion);
     }
 
     public double cos(double X) {

@@ -3,10 +3,10 @@ package Modelo;
  * Autor     @Robinson Rojas
  * Fecha     11/02/2020
  * Version   1.0
- * Licence   GNU
+ * Licence   MIT
  *
- * El programa  calcula las sumatorias de Taylor
- * de seno, coseno, PI y e^x
+ * Ejercicios de lógica de programación.
+ *
  */
 
 import Controlador.Calcular;
@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        Calcular op = new Calcular();
+        Calcular op = new Calcular(0,0,0,0);
 
         int menu = 0;
         while (menu != 6) {
